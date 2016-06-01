@@ -1,14 +1,12 @@
-# leader-project-track
-Web App to track projects being undertaken by leaders and citizen collaboration
+# countytrace
 
-##Project requisites
-1. Node js
-2. Npm
+This project is generated with [yo angular generator](https://github.com/yeoman/generator-angular)
+version 0.12.1.
 
-## Project Initialization
-1. Clone the project into a folder
-2. Run 'npm-install'
+## Build & development
 
-##Project Startup
-1. Run 'grunt serve'
+Run `grunt` for building and `grunt serve` for preview.
 
+## Testing
+
+Running `grunt test` will run the unit tests with karma.
