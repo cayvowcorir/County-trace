@@ -31,6 +31,11 @@ angular
         controller: 'AboutCtrl',
         controllerAs: 'about'
       })
+      .when('/counties/:countyId', {
+        templateUrl: 'views/county.html',
+        controller: 'CountyCtrl',
+        controllerAs: 'county'
+      })
       .otherwise({
         redirectTo: '/'
       });

@@ -19,8 +19,17 @@ body {
  font-size: 130%;
  //font-family: 'Exo', sans-serif;
 }
+// map{
+//   position: relative;
+// }
 a:hover{
   text-decoration: none;
+}
+.mapster_tooltip{
+  font-family: 'Abel', sans-serif!important;
+  border: none!important;
+  width: auto!important;
+  border-radius: 2px!important;
 }
 
 /* Everything but the jumbotron gets side spacing for mobile first views */
@@ -44,6 +53,9 @@ a:hover{
     padding-bottom: 19px;
   }
 }
+#side_bar{
+  margin-top: 30px;
+}
 
 /* Custom page footer */
 .footer {
@@ -54,6 +66,9 @@ a:hover{
 
 .container-narrow > hr {
   margin: 30px 0;
+}
+.container {
+  margin-top: -20px;
 }
 
 /* Main marketing message and sign up button */
