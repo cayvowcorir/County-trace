@@ -1,0 +1,91 @@
+<div class="container" style="max-width: 600px; margin-top:20px;padding-top:5px;">
+  <div class="col s12 m6">
+    <div class="card">
+      <div class="card-content">
+        <h5 style="color: #00BCD4;" class="center-align">Create a New Account</h5>
+        <form submit="createAccount()">
+          <div ng-if="noName" class="row">
+            <div class="input-field col s12">
+              <p class="bg-danger info-tip">Please Enter your full name</p>
+            </div>
+          </div>
+          <div class="row">
+            <div class="input-field col s12">
+              <i class="small material-icons  prefix">perm_identity</i>
+              <input ng-model="newUser.name" type="text" class="validate">
+              <label for="name">Full Name</label>
+            </div>
+          </div>
+          <div ng-if="noEmail" class="row">
+          <div class="input-field col s12">
+            <p class="bg-danger info-tip">Please Enter your Email</p>
+            </div>
+          </div>
+          <div ng-if="emailExists" class="row">
+          <div class="input-field col s12">
+            <p class="bg-danger info-tip">This Email Already Exists</p>
+            </div>
+          </div>
+          <div class="row">
+            <div class="input-field col s12">
+              <i class="small material-icons  prefix">email</i>
+              <input ng-model="newUser.email"  type="email" class="validate">
+              <label for="email">Email</label>
+            </div>
+          </div>
+          <div ng-if="noPassword" class="row">
+          <div class="input-field col s12">
+            <p class="bg-danger info-tip">Please Enter your Password</p>
+            </div>
+          </div>
+          <div class="row">
+            <div class="input-field col s12">
+              <i class="small material-icons  prefix">lock</i>
+              <input ng-model="newUser.password"  type="password" class="validate">
+              <label for="email">Password</label>
+            </div>
+          </div>
+          <div ng-if="noPasswordConfirm" class="row">
+          <div class="input-field col s12">
+            <p class="bg-danger info-tip">Please repeat your password</p>
+            </div>
+          </div>
+          <div ng-if="passwordMismatch" class="row">
+          <div class="input-field col s12">
+            <p class="bg-danger info-tip">The passwords do not match</p>
+            </div>
+          </div>
+          <div class="row">
+            <div class="input-field col s12">
+              <i class="small material-icons  prefix">lock</i>
+              <input ng-model="newUser.passwordConfirm"  type="password" class="validate">
+              <label for="email">Confirm Password</label>
+            </div>
+          </div>
+          <div ng-if="noTermsAgreement" class="row">
+          <div class="input-field col s12">
+            <p class="bg-danger info-tip">Please agree to the terms</p>
+            </div>
+          </div>
+          <div class="row">
+          <div class="input-field col s12">
+            <p>
+              <input type="checkbox" id="agreement" checked="checked" ng-model='newUser.termsAgreement' />
+              <label for="agreement">I agree with the terms and conditions</label>
+            </p>
+            </div>
+          </div>
+          <div class="center-align" style="margin-top:40px;">
+            <input type="submit" hidden>
+            <a  class="waves-effect waves-light btn " ng-click="createAccount()"><span ng-if="showButton">Create Account</span> <img ng-if="loadingRipple" width="40px" height="40px" src="images/ripple.gif"></a>
+          </div>
+          <div class="row">
+          <div class="input-field col s12">
+            <p class="center-align">Already have an account? <a href="#/users/login">Login</a></p>
+          </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

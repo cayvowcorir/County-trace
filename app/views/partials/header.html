@@ -1,17 +1,20 @@
-
-  <nav>
-    <div class="nav-wrapper">
-      <a href="#" class="brand-logo" style="margin-left: 20px;">County-Trace</a>
-      <ul id="nav-mobile" class="right hide-on-med-and-down">
-        <li><a ng-href="#/">Home</a></li>
-        <li><a ng-href="#/projects">Projects</a></li>
-        <li><a ng-href="#/concerns">Concerns</a></li>
-        <li><a ng-href="#/about">About</a></li>
-        <li><a ng-href="#/projects">Projects</a></li>
-        <li><a href="#/settings">
-            <span class="glyphicon glyphicon-cog" aria-hidden="true"></span>
-          </a></li>
+<nav ng-controller="AuthCtrl">
+  <div class="nav-wrapper">
+    <a href="#" class="brand-logo" style="margin-left: 20px;">County-Trace</a>
+    <ul id="nav-mobile" class="right hide-on-med-and-down">
+      <li><a ng-href="#/">Home</a></li>
+      <li><a ng-href="#/projects">Projects</a></li>
+      <li><a ng-href="#/concerns">Concerns</a></li>
+      <li ng-if="!userInformation"><a ng-href="#/users/login">Login</a></li>
+      <li ng-if="!userInformation"><a ng-href="#/users/new">Sign Up</a></li>
+      <li class="dropdown" ng-if="userInformation"><a class="dropdown-toggle" id="dropdownMenu1" href="" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+        <span class="glyphicon glyphicon-cog" aria-hidden="true"></span>
+      </a>
+      <ul class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenu1">
+        <li><a href="" ng-click="logout();">Logout</a></li>
+        <li><a href="#/settings">Settings</a></li>
       </ul>
-    </div>
-  </nav>
-
+    </li>
+  </ul>
+</div>
+</nav>

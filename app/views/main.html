@@ -1,339 +1,191 @@
 <div class="row">
-    <div class="col s2" ng-include="'views/partials/sidebar.html'"></div>
-<div class="col s8" id="main_content">
-
-
-<img usemap="#image-map" src="/images/county-map.svg">
-
-<map name="image-map">
-    <area shape="poly" coords="255,112,252,203,247,208,259,216,260,227,256,235,268,236,278,247,282,257,290,270,291,278,295,284,302,275,310,277,317,293,321,301,324,315,330,319,338,319,347,323,355,335,365,348,373,365,379,371,386,366,395,369,402,363,409,370,407,378,442,351,444,338,489,311,489,284,485,274,495,270,499,261,502,242,511,239,519,234,524,228,523,215,519,195,506,192,495,189,485,192,472,185,468,182,458,184,450,182,430,182,422,182,409,171,368,144,340,127,334,121,328,117,318,115,298,112,274,114" href="#/counties/1" title="Marsabit" alt="Marsabit" target="">
-    <area shape="poly" coords="520,193,533,196,543,190,557,180,558,205,580,215,601,240,619,246,619,257,622,267,632,284,635,293,644,293,658,304,658,444,642,455,634,460,623,467,608,467,601,464,584,452,573,447,564,446,549,435,524,383,518,363,530,355,522,347,511,343,507,334,500,323,495,317,498,316,491,312,491,301,489,284,487,273,498,266,502,243,524,230" href="#/counties/2" title="Wajir" alt="Wajir" target="">
-    <area shape="poly" coords="558,180,565,162,630,130,642,128,650,135,663,145,673,155,681,155,692,154,701,154,719,151,731,153,688,220,658,248,658,304,647,296,636,294,619,261,619,247,600,239,581,217,560,205,558,193" href="#/counties/3" title="Mandera" alt="Mandera" target="">
-    <area shape="poly" coords="410,375,442,352,444,338,491,311,502,324,508,332,510,343,523,350,530,358,518,362,524,386,534,402,520,406,506,427,499,429,492,433,484,435,475,442,467,444,475,467,472,477,475,490,462,487,456,490,448,490,433,467,427,466,427,456,417,429,379,444,379,456,373,464,363,459,360,440,318,436,324,429,322,423,337,419,349,421,361,435,378,437,384,431,400,427,407,420,415,417,415,396,409,386,410,384" href="#/counties/4" title="Isiolo" alt="Isiolo" target="">
-    <area shape="poly" coords="81,131,112,99,144,83,183,68,187,73,197,64,197,73,210,73,209,88,210,96,213,99,227,92,229,99,240,98,248,112,255,114,252,203,245,208,258,215,259,228,255,235,267,235,278,247,283,262,290,270,294,284,306,292,305,300,295,305,290,322,290,330,291,338,279,357,274,354,272,357,276,365,285,367,282,377,285,388,285,403,279,408,262,386,255,386,231,346,216,338,205,335,196,324,189,292,182,280,181,269,179,266,174,273,167,274,163,280,156,270,146,258,144,247,142,243,131,239,128,223,119,219,117,207,113,195,119,189,120,180,112,172,107,176,97,169,100,160,90,162,88,150,88,141" href="#/counties/5" title="Turkana" alt="Turkana" target="">
-    <area shape="poly" coords="295,283,302,275,310,275,322,299,322,313,330,318,344,318,352,329,360,338,379,373,387,365,395,368,404,364,409,380,414,394,417,417,403,425,384,429,378,439,360,434,352,421,336,417,325,421,318,418,313,411,289,419,280,408,285,386,279,382,282,373,285,367,276,365,272,356,280,356,291,339,289,327,295,308,305,301,306,293" href="#/counties/6" title="Samburu" alt="Samburu" target="">
-    <area shape="poly" coords="534,404,550,439,560,445,574,447,605,469,626,466,636,458,658,445,658,551,704,613,705,621,697,621,653,625,596,652,591,620,584,588,572,559,565,534,557,526,550,523,549,512,539,500,526,492,516,491,502,482,484,486,475,484,472,473,477,469,468,455,468,445,483,437,492,432,506,427,520,408" href="#/counties/7" title="Garissa" alt="Garissa" target="">
-    <area shape="poly" coords="446,491,460,488,473,489,476,484,489,485,503,483,516,492,529,495,539,500,547,512,547,523,561,530,566,538,573,562,582,586,589,615,596,651,597,681,613,682,631,688,626,693,619,690,608,692,593,705,570,676,515,738,507,731,502,736,464,686,477,681,495,646,491,627,495,624,492,569,461,515" href="#/counties/8" title="Tana-River" alt="Tana-River" target="">
-    <area shape="poly" coords="596,653,653,626,704,620,686,643,674,639,661,649,658,641,653,652,653,664,655,674,650,668,639,672,644,679,632,689,624,685,616,683,599,683" href="#/counties/9" title="Lamu" alt="Lamu" target="">
-    <area shape="poly" coords="515,739,570,677,593,707,591,726,591,738,586,746,586,754,573,761,566,781,566,791,557,809,547,805,541,814,535,805,529,800,524,791,524,782,503,778,512,741" href="#/counties/10" title="Kilifi" alt="Kilifi" target="">
-    <area shape="poly" coords="549,806,555,811,550,818,547,825,541,814" href="#/counties/11" title="Mombasa" alt="Mombasa" target="">
-    <area shape="poly" coords="503,780,522,780,523,791,527,800,537,807,546,826,531,858,527,868,520,865,516,860,512,869,453,827,491,814,498,797,491,792,491,787,500,789" href="#/counties/12" title="Kwale" alt="Kwale" target="">
-    <area shape="poly" coords="376,767,386,755,386,747,399,749,407,715,426,707,448,730,456,732,465,736,483,738,499,735,514,740,500,790,495,786,489,792,496,799,491,815,454,827,392,785,390,774,379,773" href="#/counties/13" title="Taita-Taveta" alt="Taita-Taveta" target="">
-    <area shape="poly" coords="248,653,251,637,248,635,251,628,252,614,251,606,274,582,276,570,291,578,289,587,303,593,307,598,318,598,329,601,326,610,342,630,345,643,351,644,376,660,388,663,384,671,382,676,405,705,407,716,399,747,386,747,386,732" href="#/counties/14" title="Kajiado" alt="Kajiado" target="">
-    <area shape="poly" coords="341,634,347,632,347,620,352,620,355,627,363,626,361,611,378,612,384,620,391,614,400,627,406,645,410,664,417,666,422,676,438,688,449,716,453,728,448,731,426,709,407,716,405,705,382,680,388,666,378,662,342,643" href="#/counties/15" title="Makueni" alt="Makueni" target="">
-    <area shape="poly" coords="388,611,398,608,398,599,390,596,387,588,379,577,383,574,394,574,400,569,396,555,405,545,405,534,406,520,411,507,421,508,427,501,434,489,446,488,491,570,493,623,495,646,476,684,464,688,502,736,480,738,453,732,449,719,440,690,422,677,417,666,410,663,410,655,400,630,394,619" href="#/counties/16" title="Kitui" alt="Kitui" target="">
-    <area shape="poly" coords="337,484,348,478,353,473,361,458,375,465,379,459,379,446,417,432,429,459,427,469,433,469,448,492,435,490,425,481,410,479,400,487,400,496,390,502,373,498,355,498" href="#/counties/17" title="Meru" alt="Meru" target="">
-    <area shape="poly" coords="287,416,313,412,322,422,318,437,361,441,361,458,351,478,338,482,328,491,332,501,326,507,318,505,316,493,307,493,303,497,295,489,299,480,297,478,289,478,285,472,278,482,268,484,270,472,266,468,272,464,264,451,270,441,274,429" href="#/counties/18" title="Laikipia" alt="Laikipia" target="">
-    <area shape="poly" coords="157,283,159,279,163,283,171,275,179,267,181,285,188,295,196,324,204,337,217,339,231,349,225,359,221,374,208,378,190,390,179,384,171,386,167,382,151,378,146,364,151,364,155,353,163,343,167,324,163,316" href="#/counties/19" title="West-Pokot" alt="West-Pokot" target="">
-    <area shape="poly" coords="148,380,163,382,171,388,177,386,179,395,194,399,192,409,184,407,173,409,163,411,148,415,146,407,142,405,128,390,136,380" href="#/counties/20" title="Trans-Nzoia" alt="Trans-Nzoia" target="">
-    <area shape="poly" coords="177,388,190,390,210,376,221,376,223,388,217,403,219,419,214,434,219,450,223,454,223,467,208,469,204,459,204,448,200,442,204,436,202,426,194,405" href="#/counties/21" title="Elgeyo-Marakwet" alt="Elgeyo-Marakwet" target="">
-    <area shape="poly" coords="231,349,254,386,260,388,280,409,289,421,272,430,270,442,264,452,272,465,264,469,260,471,256,485,243,483,239,490,235,490,227,502,221,492,206,481,212,473,210,471,225,469,223,454,219,450,214,436,221,419,217,407,223,390,221,374" href="#/counties/22" title="Baringo" alt="Baringo" target="">
-    <area shape="poly" coords="355,498,371,498,390,504,400,490,410,479,417,483,425,481,433,492,427,504,419,510,410,508,406,518,402,516,392,523,377,516" href="#/counties/23" title="Tharaka-Nithi" alt="Tharaka-Nithi" target="">
-    <area shape="poly" coords="355,500,375,516,390,523,402,516,406,520,404,529,404,547,398,554,390,549,371,560,357,554,351,551,351,547,359,545,369,545,369,533,365,520" href="#/counties/24" title="Embu" alt="Embu" target="">
-    <area shape="poly" coords="351,547,359,545,367,545,367,533,355,500,349,514,344,523,344,535" href="#/counties/25" title="Kirinyaga" alt="Kirinyaga" target="">
-    <area shape="poly" coords="349,554,355,551,365,558,371,562,388,549,398,554,396,558,400,568,396,574,382,574,379,578,388,587,394,599,396,609,388,609,386,620,377,611,361,611,363,624,355,628,357,620,349,620,344,634,328,611,324,597,334,589,340,584,346,576,353,574,357,578,367,572" href="#/counties/26" title="Machakos" alt="Machakos" target="">
-    <area shape="poly" coords="328,601,307,599,303,593,311,582,324,580,336,585,334,587,324,595" href="#/counties/27" title="Nairobi" alt="Nairobi" target="">
-    <area shape="poly" coords="289,591,293,578,297,568,293,560,303,549,332,570,349,570,359,578,349,574,338,587,324,582,311,582,303,595" href="#/counties/28" title="Kiambu" alt="Kiambu" target="">
-    <area shape="poly" coords="305,551,305,535,309,531,320,535,326,531,338,537,346,537,353,551,349,554,365,570,359,578,349,568,332,570" href="#/counties/29" title="Murang'a" alt="Murang'a" target="">
-    <area shape="poly" coords="303,498,316,496,318,508,328,510,330,506,330,494,338,487,355,498,340,529,349,537,334,539,328,533,311,533,303,533,303,527,297,512" href="#/counties/30" title="Nyeri" alt="Nyeri" target="">
-    <area shape="poly" coords="266,487,278,481,287,473,297,483,295,490,303,498,297,514,303,533,305,549,293,560,291,539,283,533,276,514,268,514,268,506,264,496" href="#/counties/31" title="Nyandarua" alt="Nyandarua" target="">
-    <area shape="poly" coords="217,490,227,502,237,492,245,485,256,487,264,469,270,473,268,490,262,498,266,514,278,516,283,533,291,541,293,562,297,568,291,578,278,574,270,562,262,562,262,545,254,537,243,543,239,539,252,539,229,523,223,533,219,541,210,533,202,518,198,510,217,508" href="#/counties/32" title="Nakuru" alt="Nakuru" target="">
-    <area shape="poly" coords="139,594,131,579,129,571,131,565,160,557,172,559,180,567,197,563,207,548,197,540,197,538,209,532,218,542,228,524,242,532,253,540,261,546,261,561,269,561,275,573,271,586,251,604,249,635,246,654" href="#/counties/33" title="Narok" alt="Narok" target="">
-    <area shape="poly" coords="163,558,171,554,167,525,179,525,186,520,190,527,202,518,210,535,196,539,206,551,196,564,181,568" href="#/counties/34" title="Bomet" alt="Bomet" target="">
-    <area shape="poly" coords="173,407,186,405,194,407,204,424,198,424,204,434,202,442,206,459,212,471,206,481,200,481,194,471,192,465,175,440,169,436,167,432,175,428" href="#/counties/35" title="Uasin-Gishu" alt="Uasin-Gishu" target="">
-    <area shape="poly" coords="169,523,177,525,188,520,190,529,200,518,198,510,208,512,210,508,221,502,214,500,217,492,208,483,198,483,200,492,184,492,192,502,171,500,165,518,181,518,179,516" href="#/counties/36" title="Kericho" alt="Kericho" target="">
-    <area shape="poly" coords="89,566,99,558,93,549,107,556,120,556,126,541,136,537,132,554,132,566,130,574,140,595" href="#/counties/37" title="Migori" alt="Migori" target="">
-    <area shape="poly" coords="93,549,85,533,95,525,97,516,115,520,118,525,122,527,120,514,128,508,144,510,159,518,134,537,124,543,124,556,107,556" href="#/counties/38" title="Homa-Bay" alt="Homa-Bay" target="">
-    <area shape="poly" coords="153,525,134,537,132,566,163,556,151,543,148,541" href="#/counties/39" title="Kisii" alt="Kisii" target="">
-    <area shape="poly" coords="155,525,165,518,169,529,169,556,163,554,151,541" href="#/counties/40" title="Nyamira" alt="Nyamira" target="">
-    <area shape="poly" coords="153,502,155,502,142,492,115,496,120,487,146,483,167,487,181,487,190,502,175,502,161,520,144,508" href="#/counties/41" title="Kisumu" alt="Kisumu" target="">
-    <area shape="poly" coords="107,512,91,494,93,492,95,487,87,487,95,463,111,456,120,473,128,477,126,485,120,490,111,498,113,506" href="#/counties/42" title="Siaya" alt="Siaya" target="">
-    <area shape="poly" coords="85,485,78,475,82,461,91,452,91,444,93,432,107,419,115,421,109,436,111,448,113,459,95,461" href="#/counties/43" title="Busia" alt="Busia" target="">
-    <area shape="poly" coords="126,487,128,475,148,467,159,467,153,483,138,485" href="#/counties/44" title="Vihiga" alt="Vihiga" target="">
-    <area shape="poly" coords="113,446,113,463,128,477,151,469,159,454,161,450,153,438,151,432,140,444,132,446" href="#/counties/45" title="Kakamega" alt="Kakamega" target="">
-    <area shape="poly" coords="113,446,113,438,115,421,107,421,118,413,126,388,144,407,151,417,175,409,173,430,151,432,136,446" href="#/counties/46" title="Bungoma" alt="Bungoma" target="">
-    <area shape="poly" coords="157,469,159,459,163,450,153,436,165,432,175,442,192,467,200,481,198,494,184,494,179,487,155,485" href="#/counties/nandi" title="47" alt="Nandi" target="">
-</map>
-
-</div>
-<div class="col s2">
-  <div >kkl
-    <div id="caption-box" style="clear:both;border: 1px solid black; width: 400px; padding: 6px; display:none;">
-        <div id="caption-hearder" style="font-style: italic; font-weight: bold; margin-bottom: 12px;">{{location.name}}</div>
-        <div id="caption-text">{{location.details}}</div>
+  <div class="col s5">
+    <img class="img-responsive" src="/images/county-map.svg">
+  </div>
+  <div class="col s7">
+    <div class="row">
+      <div class="col s5">
+        <!--     <div class="col s2" ng-include="'views/partials/sidebar.html'"></div> -->
+        <div class="card" style="height: 273px;" >
+          <!-- <div id="caption-box">
+            <div id="caption-hearder">{{displayInfo.name}}
+            </div>
+            <div id="caption-text">{{displayInfo.details}}</div>
+          </div> -->
+          <div class="card-content" id="caption-box">
+            <b><h5 style="color: #00BCD4;" class="center-align">Kenya: General Info</h5></b>
+            <p><b>Area:</b> 582,650 sq. km</p>
+            <p><b>Coastline:</b> 536 km</p>
+            <p><b>President:</b> Uhuru Muigai Kenyatta</p>
+            <p><b>VicePresident:</b> William Samoei Ruto</p>
+            <p><b>Population:</b> 40 million (2009 census)</p>
+            <p><b>Counties:</b> 47</p>
+          </div>
+        </div>
+      </div>
+      <div class="col s7">
+        <div class="card" style="height: 263px;">
+          <div class="card-content">
+            <div class="row">
+              <div class="card-title">
+                <b><h5 style="color: #00BCD4;" class="center-align">Top Public Concerns</h5></b>
+                <div style="margin: -50px 5px 0px 0px;" class="pull-right">
+                  <div ng-if="userInformation" class="chip ">
+                    <a href="" data-toggle="modal" data-target="#createConcern"><span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
+                  Create</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div style="margin-top:-5px;">
+            <ul class="collection">
+              <li class="collection-item" ng-repeat="concern in concerns | limitTo : 4">
+                <a href="#/concern/{{concern.publicConcernId}}">{{concern.publicConcernName}}</a>
+              </li>
+            </ul>
+          </div>
+          <a class="pull-right" href="#/concerns">SEE MORE...</a>
+        </div>
+      </div>
     </div>
+  </div>
+  <div class="row" style="margin-top: -20px;">
+    <div class="col s12">
+      <div class="card">
+        <div class="card-content">
+          <b><h5 style="color: #00BCD4;" class="center-align">Projects</h5></b>
+          <div style="margin: -40px 5px 0px 0px;" class="pull-right">
+            <div ng-if="userInformation.IsLeader=='1'" class="chip ">
+              <a href="" data-toggle="modal" data-target="#createProject"><span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
+            Create</a>
+          </div>
+        </div>
+
+        <div>
+          <div id="uiGridProjects" ui-grid="gridOptions"  ui-grid-selection ui-grid-pagination ui-grid-exporter class="myGrid" style="max-height: 150px;"></div>
+
+        </div>
+        <div class="card-action">
+          <a class="pull-right" style="color:#337ab7; margin-right: -23px;" href="#/projects">See More...</a>
+        </div>
+
+      </div>
+    </div>
+  </div>
 </div>
 </div>
-
+</div>
+<!-- Modal Structure -->
+<div id="createConcern" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+<div class="modal-dialog" role="document">
+<div class="modal-content">
+  <div class="modal-body container" style="margin-top: 5px;">
+    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+    <h5 style="color: #00BCD4;" class="center-align">Create a New Concern</h5>
+    <form submit="createConcern()">
+      <div class="row">
+        <div class="input-field col s12">
+          <!-- <i class="small material-icons  prefix">mode_edit</i> -->
+          <input ng-model="newConcern.title" id="concern_title" type="text" class="validate">
+          <label for="name">Title</label>
+        </div>
+      </div>
+      <div class="row">
+        <div class="input-field col s12">
+          <!-- <i class="small material-icons prefix">mode_edit</i> -->
+          <textarea ng-model="newConcern.description" class="materialize-textarea" id="concern_description" ></textarea>
+          <label for="description">Description</label>
+        </div>
+      </div>
+      <div class="row">
+        <div class="input-field col s6">
+          <select class="browser-default" ng-model="newConcern.level" ng-init="newConcern.level='none'" >
+            <option value="none">Block Level</option>
+            <option value="country">National</option>
+            <option value="county">County</option>
+            <option value="constituency">Constituency</option>
+            <option value="ward">Ward</option>
+          </select>
+        </div>
+        <div class="input-field col s6">
+          <select class="browser-default" ng-model="newConcern.blockId" >
+            <option ng-repeat="block in blockList track by block.blockId" value="{{block.blockId}}" >{{block.name}}</option>
+          </select>
+        </div>
+      </div>
+      <div class="row ">
+        <div class="col s3 input-field"><label for="addressee">Addressed To:</label></div>
+        <div class="col s9 input-field">
+          <select id="addressee" class="browser-default" ng-model="newConcern.addressee">
+            <option ng-repeat="addressee in addresseeList" ng-selected="addressee.value=='0'" value="{{addressee.name}}" >{{addressee.name}}</option>
+          </select>
+        </div>
+      </div>
+    </form>
+  </div>
+  <div class="modal-footer">
+    <input type="submit" hidden>
+    <a type="button" class="btn btn-default" data-dismiss="modal">Cancel</a>
+    <a type="button" ng-click="createConcern()" class="btn btn-primary">Submit Concern</a>
+  </div>
+</div>
+</div>
 </div>
 
-<!-- Script has to be here because of template injection, it won't work anywhere else -->
 
-<script type="text/javascript">
 
- $('img').mapster({
-  fillOpacity: 0.1,
-  stroke: false,
-  scaleMap:true,
-  clickNavigate: true,
-
-    showToolTip: true,
-    toolTipClose: ["area-mouseout"],
-    singleSelect: true,
-    render_select: {
-        fillColor: 'ff000c',
-        fillOpacity: 0.2,
-        stroke: false
-    },
-    onMouseover: function (data) {
-            console.log(data);
-            $('#caption-box').attr('ng-model', data.key);
-        },
-        onMouseout: function (data) {
-            console.log(data.key);
-
-            $('#beatles-caption').hide();
-        },
-
-    fadeInterval: 50,
-    mapKey: 'title',
-  areas: [{
-            key: "Marsabit",
-            fillColor: "000000",
-            toolTip:'Marsabit County'
-        },
-        {
-            key: "Wajir",
-            fillColor: "000000",
-            toolTip:'Wajir County'
-        },
-        {
-            key: "Mandera",
-            fillColor: "000000",
-            toolTip:'Mandera County'
-        },
-        {
-            key: "Isiolo",
-            fillColor: "000000",
-            toolTip:'Isiolo County'
-        },
-        {
-            key: "Turkana",
-            fillColor: "000000",
-            toolTip:'Turkana County'
-        },
-        {
-            key: "Samburu",
-            fillColor: "000000",
-            toolTip:'Samburu County'
-        },
-        {
-            key: "Garissa",
-            fillColor: "000000",
-            toolTip:'Garissa County'
-        },
-        {
-            key: "Tana-River",
-            fillColor: "000000",
-            toolTip:'Tana-River County'
-        },
-        {
-            key: "Mombasa",
-            fillColor: "000000",
-            toolTip:'Mombasa County'
-        },
-        {
-            key: "Kilifi",
-            fillColor: "000000",
-            toolTip:'Kilifi County'
-        },
-        {
-            key: "Kajiado",
-            fillColor: "000000",
-            toolTip:'Kajiado County'
-        },
-        {
-            key: "Taita-Taveta",
-            fillColor: "000000",
-            toolTip:'Taita-Taveta County'
-        },
-        {
-            key: "Meru",
-            fillColor: "000000",
-            toolTip:'Meru County'
-        },
-        {
-            key: "Makueni",
-            fillColor: "000000",
-            toolTip:'Makueni County'
-        },
-        {
-            key: "Kitui",
-            fillColor: "000000",
-            toolTip:'Kitui County'
-        },
-        {
-            key: "Embu",
-            fillColor: "000000",
-            toolTip:'Embu County'
-        },
-        {
-            key: "Tharaka-Nithi",
-            fillColor: "000000",
-            toolTip:'Tharaka-Nithi County'
-        },
-        {
-            key: "Laikipia",
-            fillColor: "000000",
-            toolTip:'Laikipia County'
-        },
-        {
-            key: "Trans-Nzoia",
-            fillColor: "000000",
-            toolTip:'Trans-Nzoia County'
-        },
-        {
-            key: "Elgeyo-Marakwet",
-            fillColor: "000000",
-            toolTip:'Elgeyo-Marakwet County'
-        },
-        {
-            key: "Machakos",
-            fillColor: "000000",
-            toolTip:'Machakos County'
-        },
-        {
-            key: "Nairobi",
-            fillColor: "000000",
-            toolTip:'Nairobi County'
-        },
-        {
-            key: "Kiambu",
-            fillColor: "000000",
-            toolTip:'Kiambu County'
-        },
-        {
-            key: "Nyeri",
-            fillColor: "000000",
-            toolTip:'Nyeri County'
-        },
-        {
-            key: "Murang'a",
-            fillColor: "000000",
-            toolTip:'Murang\'a County'
-        },
-        {
-            key: "Nyandarua",
-            fillColor: "000000",
-            toolTip:'Nyandarua County'
-        },
-        {
-            key: "Nakuru",
-            fillColor: "000000",
-            toolTip:'Nakuru County'
-        },
-        {
-            key: "Narok",
-            fillColor: "000000",
-            toolTip:'Narok County'
-        },
-        {
-            key: "Bomet",
-            fillColor: "000000",
-            toolTip:'Bomet County'
-        },
-        {
-            key: "Uasin-Gishu",
-            fillColor: "000000",
-            toolTip:'Uasin-Gishu County'
-        },
-        {
-            key: "Kericho",
-            fillColor: "000000",
-            toolTip:'Kericho County'
-        },
-        {
-            key: "Homa-Bay",
-            fillColor: "000000",
-            toolTip:'Homa-Bay County'
-        },
-        {
-            key: "Nyamira",
-            fillColor: "000000",
-            toolTip:'Nyamira County'
-        },
-        {
-            key: "Kisumu",
-            fillColor: "000000",
-            toolTip:'Kisumu County'
-        },
-        {
-            key: "Siaya",
-            fillColor: "000000",
-            toolTip:'Siaya County'
-        },
-        {
-            key: "Busia",
-            fillColor: "000000",
-            toolTip:'Busia County'
-        },
-        {
-            key: "Vihiga",
-            fillColor: "000000",
-            toolTip:'Vihiga County'
-        },
-        {
-            key: "Kakamega",
-            fillColor: "000000",
-            toolTip:'Kakamega County'
-        },
-        {
-            key: "Bungoma",
-            fillColor: "000000",
-            toolTip:'Bungoma County'
-        },
-        {
-            key: "Nandi",
-            fillColor: "000000",
-            toolTip:'Nandi County'
-        },
-        {
-            key: "Migori",
-            fillColor: "000000",
-            toolTip:'Migori County'
-        },
-        {
-            key: "Kisii",
-            fillColor: "000000",
-            toolTip:'Kisii County'
-        },
-        {
-            key: "Baringo",
-            fillColor: "000000",
-            toolTip:'Baringo County'
-        },
-        {
-            key: "Kwale",
-            fillColor: "000000",
-            toolTip:'Kwale County'
-        },
-        {
-            key: "Lamu",
-            fillColor: "000000",
-            toolTip:'Lamu County'
-        },
-        {
-            key: "West-Pokot",
-            fillColor: "000000",
-            toolTip:'West-Pokot County'
-        },
-        {
-            key: "Kirinyaga",
-            fillColor: "000000",
-            toolTip:'KirinyagaW County'
-        }]
-
- });
-
- </script>
-
+<div id="createProject" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+<div class="modal-dialog" role="document">
+<div class="modal-content">
+  <div class="modal-body container" style="margin-top: 5px;">
+    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+    <h5 style="color: #00BCD4;" class="center-align">Create a New Project</h5>
+    <form submit="createProject()">
+      <div class="row">
+        <div class="input-field col s12">
+          <!-- <i class="small material-icons  prefix">mode_edit</i> -->
+          <input ng-model="newProject.name" type="text" class="validate">
+          <label for="name">Project Name</label>
+        </div>
+      </div>
+      <div class="row">
+        <div class="input-field col s12">
+          <!-- <i class="small material-icons prefix">mode_edit</i> -->
+          <textarea ng-model="newProject.description" class="materialize-textarea" ></textarea>
+          <label for="description">Project Description</label>
+        </div>
+      </div>
+      <div class="row">
+        <div class="input-field col s6">
+          <select class="browser-default" ng-model="newProject.status" ng-init="newProject.status='none'" >
+            <option value="none">Project Status</option>
+            <option value="0%">Proposed</option>
+            <option value="25%">25% Complete</option>
+            <option value="50%">50% Complete</option>
+            <option value="75%">75% Complete</option>
+            <option value="100%">Complete</option>
+          </select>
+        </div>
+        <div class="input-field col s6">
+          <select class="browser-default" ng-model="newProject.publicConcernId" >
+            <option ng-repeat="concern in blockConcerns track by concern.publicConcernId" value="{{concern.publicConcernId}}" >{{concern.publicConcernName}}</option>
+          </select>
+        </div>
+      </div>
+      <div class="row ">
+        <div class="input-field col s12">
+          <!-- <i class="small material-icons  prefix">mode_edit</i> -->
+          <input ng-model="newProject.budget" type="text" class="validate">
+          <label for="name">Project Budget</label>
+        </div>
+      </div>
+    </form>
+  </div>
+  <div class="modal-footer">
+    <input type="submit" hidden>
+    <a type="button" class="btn btn-default" data-dismiss="modal">Cancel</a>
+    <a type="button" ng-click="createProject()" class="btn btn-primary">Submit Concern</a>
+  </div>
+</div>
+</div>
+</div>

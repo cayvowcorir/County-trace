@@ -1,0 +1,66 @@
+<div class="container" style="max-width: 600px; margin-top:20px; margin-bottom:200px; padding-top:5px;">
+  <div class="col s12 m6">
+    <div class="card">
+      <div class="card-content">
+        <h5 style="color: #00BCD4;" class="center-align">Login</h5>
+        <form submit="login()">
+
+          <div ng-if="noLoginEmail" class="row">
+          <div class="input-field col s12">
+            <p class="bg-danger info-tip">Please Enter your Email</p>
+            </div>
+          </div>
+          <div ng-if="accountNonExistent" class="row">
+          <div class="input-field col s12">
+            <p class="bg-danger info-tip">No Account exists for the email provided</p>
+            </div>
+          </div>
+           <div ng-if="wrongCredentials" class="row">
+          <div class="input-field col s12">
+            <p class="bg-danger info-tip">Email/Password mismatch. Enter the correct password, or <a href="users/login/password-forgotten">request a new one</a></p>
+            </div>
+          </div>
+          <div class="row">
+            <div class="input-field col s12">
+              <i class="small material-icons  prefix">email</i>
+              <input ng-model="user.email"  type="email" class="validate">
+              <label for="email">Email</label>
+            </div>
+          </div>
+          <div ng-if="noLoginPassword" class="row">
+          <div class="input-field col s12">
+            <p class="bg-danger info-tip">Please Enter your Password</p>
+            </div>
+          </div>
+          <div class="row">
+            <div class="input-field col s12">
+              <i class="small material-icons  prefix">lock</i>
+              <input ng-model="user.password"  type="password" class="validate">
+              <label for="email">Password</label>
+            </div>
+          </div>
+          <div class="row">
+            <div class="input-field center-align col s12" ng-init="user.loginType='citizen'" >
+
+                <input name="loginType" type="radio" class="with-gap" value="citizen" ng-model="user.loginType" checked id="loginCitizen" />
+                <label for="loginCitizen">Citizen Login</label>
+
+                <input name="loginType" type="radio" class="with-gap" value="leader"  ng-model="user.loginType" id="loginLeader" />
+                <label for="loginLeader">Leader Login</label>
+
+            </div>
+          </div>
+          <div class="center-align" style="margin-top:40px;">
+            <input type="submit" hidden>
+            <a  class="waves-effect waves-light btn " ng-click="login()"><span ng-if="showButton">Login</span> <img ng-if="loadingRipple" width="40px" height="40px" src="images/ripple.gif"></a>
+          </div>
+          <div class="row">
+          <div class="input-field col s12">
+            <p class="center-align">Don't have an account? <a href="#/users/new">Sign Up</a></p>
+          </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
