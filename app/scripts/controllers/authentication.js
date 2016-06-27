@@ -145,6 +145,7 @@ angular.module('countytraceApp')
         };
 
         $scope.logout= function(){
+          $localStorage.$reset();
           var user=AuthService.logout();
           user.$promise.then(function(successResponse){
               toastr.info('You have been Logged out');
@@ -154,6 +155,7 @@ angular.module('countytraceApp')
               $location.replace();
 
           }, function(error){
+            console.log(error);
             toastr.warning("An error occured while trying to log you out. Please try again");
           }).finally(function(){
 

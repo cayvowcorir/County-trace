@@ -37,6 +37,10 @@ module.exports = function(config) {
       'bower_components/angular-ui-grid/ui-grid.js',
       'bower_components/toastr/toastr.js',
       'bower_components/ngstorage/ngStorage.js',
+      'bower_components/ng-image-cropper/dist/angular-image-cropper.js',
+      'bower_components/ng-file-upload/ng-file-upload.js',
+      'bower_components/ng-file-upload-shim/ng-file-upload-shim.js',
+      'bower_components/ng-img-crop/compile/minified/ng-img-crop.js',
       'bower_components/angular-mocks/angular-mocks.js',
       // endbower
       "app/scripts/**/*.js",

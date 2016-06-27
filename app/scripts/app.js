@@ -19,7 +19,9 @@ angular
     'ngSanitize',
     'ngTouch',
     'ui.grid',
-    'ngStorage'
+    'ngStorage',
+    'ngFileUpload',
+    'ngImgCrop'
   ])
   .config(function ($routeProvider, $httpProvider) {
     $routeProvider

@@ -60,15 +60,12 @@
             Create</a>
           </div>
         </div>
-
         <div>
           <div id="uiGridProjects" ui-grid="gridOptions"  ui-grid-selection ui-grid-pagination ui-grid-exporter class="myGrid" style="max-height: 150px;"></div>
-
         </div>
         <div class="card-action">
           <a class="pull-right" style="color:#337ab7; margin-right: -23px;" href="#/projects">See More...</a>
         </div>
-
       </div>
     </div>
   </div>
@@ -76,9 +73,10 @@
 </div>
 </div>
 <!-- Modal Structure -->
+<!-- Modal to create a new concern -->
 <div id="createConcern" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
 <div class="modal-dialog" role="document">
-<div class="modal-content">
+<div ng-if='firstStep' class="modal-content">
   <div class="modal-body container" style="margin-top: 5px;">
     <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
     <h5 style="color: #00BCD4;" class="center-align">Create a New Concern</h5>
@@ -125,15 +123,103 @@
   </div>
   <div class="modal-footer">
     <input type="submit" hidden>
-    <a type="button" class="btn btn-default" data-dismiss="modal">Cancel</a>
-    <a type="button" ng-click="createConcern()" class="btn btn-primary">Submit Concern</a>
+    <a type="button" class="btn red btn-default" data-dismiss="modal">Cancel</a>
+    <a type="button" ng-click="concernNextStep()" class="btn green btn-primary">Next Step</a>
+  </div>
+</div>
+<div ng-if='secondStep' class="modal-content">
+  <div class="modal-body container" style="margin-top: 5px;">
+    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+    <h5 style="color: #00BCD4;" class="center-align">Upload Photos (Optional)</h5>
+    <form submit="createConcern()" name="concernPhotoForm">
+      <div class="row ">
+        <div class="col s3 input-field"><label for="addressee">Number of photos</label></div>
+        <div class="col s9 input-field">
+          <select class="browser-default" ng-model="concernImages.Number">
+            <option value="0" ng-init="concernImages.Number='0'"  selected >None</option>
+            <option value="1" >One</option>
+            <option value="2" >Two</option>
+            <option value="3" >Three</option>
+            <option value="4" >Four</option>
+            <option value="5" >Five</option>
+          </select>
+        </div>
+      </div>
+      <div style="overflow:scroll; max-height:350px;">
+      <div ng-if="concernImages.Number=='5'||concernImages.Number=='4'||concernImages.Number=='3'||concernImages.Number=='2'||concernImages.Number=='1'">
+        <div id="dropBox1" style="width: auto;height: 250px ;" ngf-change="disableDropSelect(1)" ngf-drop ngf-select ng-model="file1" class="drop-box"
+          ngf-drag-over-class="'dragover'" ngf-allow-dir="true"
+          accept="image/*"
+          ngf-pattern="'image/*'"><span id="dropBoxInner1">Drop images here or click to select</span>
+          <img-crop image="file1 | ngfDataUrl" area-type="square"
+          result-image="croppedDataUrl1" ng-init="croppedDataUrl1=''">
+          </img-crop>
+        </div>
+        <img id="croppedPreviewBox1" class="hidden" style="margin-left: auto;margin-right: auto;" ng-src="{{croppedDataUrl1}}" />
+      </div>
+
+      <div ng-if="concernImages.Number=='5'||concernImages.Number=='4'||concernImages.Number=='3'||concernImages.Number=='2'">
+        <div id="dropBox2" style="width: auto;height: 250px ;" ngf-change="disableDropSelect(2)" ngf-drop ngf-select ng-model="file2" class="drop-box"
+          ngf-drag-over-class="'dragover'" ngf-allow-dir="true"
+          accept="image/*"
+          ngf-pattern="'image/*'"><span id="dropBoxInner1">Drop images here or click to select</span>
+          <img-crop image="file2 | ngfDataUrl" area-type="square"
+          result-image="croppedDataUrl2" ng-init="croppedDataUrl2=''">
+          </img-crop>
+        </div>
+        <img id="croppedPreviewBox2" class="hidden" style="margin-left: auto;margin-right: auto;" ng-src="{{croppedDataUrl2}}" />
+      </div>
+
+      <div ng-if="concernImages.Number=='5'||concernImages.Number=='4'||concernImages.Number=='3'">
+        <div id="dropBox3" style="width: auto;height: 250px ;" ngf-change="disableDropSelect(3)" ngf-drop ngf-select ng-model="file3" class="drop-box"
+          ngf-drag-over-class="'dragover'" ngf-allow-dir="true"
+          accept="image/*"
+          ngf-pattern="'image/*'"><span id="dropBoxInner1">Drop images here or click to select</span>
+          <img-crop image="file3 | ngfDataUrl" area-type="square"
+          result-image="croppedDataUrl3" ng-init="croppedDataUrl3=''">
+          </img-crop>
+        </div>
+        <img id="croppedPreviewBox3" class="hidden" style="margin-left: auto;margin-right: auto;" ng-src="{{croppedDataUrl3}}" />
+      </div>
+
+      <div ng-if="concernImages.Number=='5'||concernImages.Number=='4'">
+        <div id="dropBox4" style="width: auto;height: 250px ;" ngf-change="disableDropSelect(4)" ngf-drop ngf-select ng-model="file4" class="drop-box"
+          ngf-drag-over-class="'dragover'" ngf-allow-dir="true"
+          accept="image/*"
+          ngf-pattern="'image/*'"><span id="dropBoxInner1">Drop images here or click to select</span>
+          <img-crop image="file4 | ngfDataUrl" area-type="square"
+          result-image="croppedDataUrl4" ng-init="croppedDataUrl4=''">
+          </img-crop>
+        </div>
+        <img id="croppedPreviewBox4" class="hidden" style="margin-left: auto;margin-right: auto;" ng-src="{{croppedDataUrl4}}" />
+      </div>
+
+      <div ng-if="concernImages.Number=='5'">
+        <div id="dropBox5" style="width: auto;height: 250px ;" ngf-change="disableDropSelect(5)" ngf-drop ngf-select ng-model="file5" class="drop-box"
+          ngf-drag-over-class="'dragover'" ngf-allow-dir="true"
+          accept="image/*"
+          ngf-pattern="'image/*'"><span id="dropBoxInner1">Drop images here or click to select</span>
+          <img-crop image="file5 | ngfDataUrl" area-type="square"
+          result-image="croppedDataUrl5" ng-init="croppedDataUrl5=''">
+          </img-crop>
+        </div>
+        <img id="croppedPreviewBox5" class="hidden" style="margin-left: auto;margin-right: auto;" ng-src="{{croppedDataUrl5}}" />
+      </div>
+      </div>
+
+      <input type="submit" hidden>
+    </form>
+  </div>
+  <div class="modal-footer">
+    <input type="submit" hidden>
+    <a type="button" class="btn pull-left btn-default" ng-click="concernGoBack()" data-dismiss="modal">Back</a>
+    <a type="button" class="btn red btn-default" data-dismiss="modal">Cancel</a>
+    <a type="button" ng-click="createConcern()" class="btn green btn-primary">Submit Concern</a>
   </div>
 </div>
 </div>
 </div>
-
-
-
+<!-- Create a new project -->
 <div id="createProject" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
 <div class="modal-dialog" role="document">
 <div class="modal-content">

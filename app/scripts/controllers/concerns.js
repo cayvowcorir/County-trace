@@ -13,6 +13,7 @@ angular.module('countytraceApp')
         $location.replace();
       };
 
+
       $scope.gridOptions = {
             enableSorting: true,
             exporterMenuCsv: false,
