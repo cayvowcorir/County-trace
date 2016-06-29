@@ -22,6 +22,10 @@ angular.module('countytraceApp').factory('ConcernsService', function($resource, 
         getConcern: function(id){
           var concern=$resource($rootScope.serverUrlBase+'/concerns/:id');
           return concern.get({id:id});
+        },
+        getConcernImages: function(id){
+          var concernImage=$resource($rootScope.serverUrlBase+'/concerns/:id/images');
+          return concernImage.query({id:id});
         }
     };
 });
