@@ -39,6 +39,7 @@ angular.module('countytraceApp').controller('MainCtrl', function($scope, $rootSc
     };
     $rootScope.concerns = [];
     $scope.newConcern = {};
+    $scope.leader={};
     $scope.blockList = [];
     $scope.blockConcerns = [];
     $scope.addresseeList = [];
@@ -53,9 +54,13 @@ angular.module('countytraceApp').controller('MainCtrl', function($scope, $rootSc
 
 
 
-    $scope.$watch("newConcern.level", function(newValue, oldValue) {
+    $scope.$watch("newConcern.level, leader.level", function(newValue, oldValue) {
         if ($scope.newConcern.level == 'country') {
             $scope.blockList = [{
+                'name': 'Kenya',
+                'blockId': '48'
+            }];
+            $scope.leader.block = [{
                 'name': 'Kenya',
                 'blockId': '48'
             }];
